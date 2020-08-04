@@ -8,11 +8,11 @@ export default function Navbar() {
   return (
     <ProductConsumer>
       {(value) => {
-        const { cartItems, handleSideBar, handleCart } = value;
+        const { cartItems, handleSidebar, handleCart } = value;
         return (
           <NavWrapper>
             <div className="nav-center">
-              <FaBars className="nav-icon" onClick={handleSideBar} />
+              <FaBars className="nav-icon" onClick={handleSidebar} />
               <img src={logo} alt="logo" />
               <div className="nav-cart">
                 <FaCartPlus className="nav-icon" onClick={handleCart} />
