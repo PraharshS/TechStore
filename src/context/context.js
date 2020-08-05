@@ -160,18 +160,74 @@ class ProductProvider extends Component {
   // cart functionality
   // increment / decrement
   increment = (id) => {
-    console.log(id);
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find((item) => item.id === id);
+    cartItem.count++;
+    cartItem.total = cartItem.price * cartItem.count;
+    cartItem.total = parseFloat(cartItem.total.toFixed(2));
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+        };
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+        // this.openCart();
+      }
+    );
   };
   decrement = (id) => {
-    console.log(id);
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find((item) => item.id === id);
+    cartItem.count--;
+    if (cartItem.count == 0) {
+      this.removeItem(id);
+      return;
+    }
+    cartItem.total = cartItem.price * cartItem.count;
+    cartItem.total = parseFloat(cartItem.total.toFixed(2));
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+        };
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+        // this.openCart();
+      }
+    );
   };
 
   // Remove item
   removeItem = (id) => {
-    console.log(id);
+    let tempCart = [...this.state.cart];
+    tempCart = tempCart.filter((item) => item.id !== id);
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+        };
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+      }
+    );
   };
   clearCart = () => {
-    console.log("this will clear the cart");
+    this.setState(
+      {
+        cart: [],
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+      }
+    );
   };
 
   render() {
