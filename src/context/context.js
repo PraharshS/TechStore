@@ -20,6 +20,12 @@ class ProductProvider extends Component {
     featuredProducts: [],
     singleProducts: {},
     loading: true,
+    search: "",
+    price: 120,
+    min: 0,
+    max: 1000,
+    company: "all",
+    shipping: false,
   };
 
   componentDidMount() {
@@ -229,7 +235,18 @@ class ProductProvider extends Component {
       }
     );
   };
-
+  handleChange = (e) => {
+    const name = e.target.name;
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    this.setState(
+      {
+        [name]: value,
+      },
+      this.sortData
+    );
+  };
+  sortData = () => {};
   render() {
     return (
       <ProductContext.Provider
@@ -244,6 +261,7 @@ class ProductProvider extends Component {
           decrement: this.decrement,
           removeItem: this.removeItem,
           clearCart: this.clearCart,
+          handleChange: this.handleChange,
           ...this.state,
         }}
       >
