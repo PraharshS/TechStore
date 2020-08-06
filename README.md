@@ -1,3 +1,8 @@
+Site is published at https://react-techstore12.netlify.app/
+
+DUMMY paypal credentials for checkout 
+EMAIL - draken666@gmmail.com
+PASSWORD - S)KhF7%f
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
