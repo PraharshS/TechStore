@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { linkData } from "./linkData";
 import { socialData } from "./socialData";
-import { items } from "./productData";
+// import { items } from "./productData";
+import { client } from "./contentful";
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
@@ -30,7 +31,15 @@ class ProductProvider extends Component {
 
   componentDidMount() {
     // from contentfull items
-    this.setProducts(items);
+    client
+      .getEntries({
+        content_type: "techStoreProducts",
+      })
+      .then((response) => {
+        this.setProducts(response.items);
+        console.log(response.items);
+      })
+      .catch(console.error);
   }
 
   setProducts = (products) => {
@@ -269,6 +278,7 @@ class ProductProvider extends Component {
         if (tempSearch === tempTitle) {
           return item;
         }
+        // return 0;
       });
     }
 
