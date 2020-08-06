@@ -182,7 +182,7 @@ class ProductProvider extends Component {
     let tempCart = [...this.state.cart];
     const cartItem = tempCart.find((item) => item.id === id);
     cartItem.count--;
-    if (cartItem.count == 0) {
+    if (cartItem.count === 0) {
       this.removeItem(id);
       return;
     }

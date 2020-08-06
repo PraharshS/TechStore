@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ProductConsumer } from "../context";
-import { render } from "@testing-library/react";
 
 export default function Footer() {
   return (
@@ -18,7 +17,12 @@ export default function Footer() {
               </div>
               <div className="col-md-6 d-flex justify-content-around">
                 {value.socialLinks.map((link) => (
-                  <a href={link.url} target="_blank" key={link.id}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={link.id}
+                  >
                     {link.icon}
                   </a>
                 ))}
