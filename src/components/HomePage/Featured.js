@@ -25,7 +25,7 @@ export default function Featured() {
         <div className="row mt-5">
           <div className="col text-center">
             <Link to="/products" className="main-link">
-              Our products
+              Our Featured Cars
             </Link>
           </div>
         </div>

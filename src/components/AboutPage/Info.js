@@ -18,9 +18,13 @@ export default function Info() {
           <div className="col-10 mx-auto col-md-6 my-3">
             <Title title="about us"></Title>
             <p className="text-lead text-muted my-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              accusamus voluptate magni in suscipit consectetur illo eos quidem
-              officiis aliquam?
+              At Car store we are also all about giving our customers that
+              little bit more after purchasing a car from us. As well as our
+              great offers on New and Used cars you will find exclusive news
+              from our dealerships and manufacturers. You can also keep up to
+              date with our latest blog posts and events. Car store has national
+              coverage with over 130 locations across India, Bangladesh and
+              Nepal - search for your nearest locations.
             </p>
 
             <button

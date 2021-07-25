@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import styled from "styled-components";
@@ -13,7 +14,12 @@ export default function Navbar() {
           <NavWrapper>
             <div className="nav-center">
               <FaBars className="nav-icon" onClick={handleSidebar} />
-              <img src={logo} alt="logo" />
+
+              <h2 style={{ color: "#5fb7ea", fontWeight: "bold" }}>
+                Car Store
+              </h2>
+
+              {/* <img src={logo} alt="logo" /> */}
               <div className="nav-cart">
                 <FaCartPlus className="nav-icon" onClick={handleCart} />
                 <div className="cart-items">{cartItems}</div>

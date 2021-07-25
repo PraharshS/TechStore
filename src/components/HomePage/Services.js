@@ -8,22 +8,19 @@ export default class Services extends Component {
         id: 1,
         icon: <FaDolly />,
         title: "free shipping",
-        text:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, accusantium!",
+        text: "Free shipping on selected Premium Cars",
       },
       {
         id: 2,
         icon: <FaRedo />,
         title: "30 days return policy",
-        text:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, accusantium!",
+        text: "30 days return policy with easy documentation",
       },
       {
         id: 3,
         icon: <FaDollarSign />,
         title: "secured payment",
-        text:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, accusantium!",
+        text: "Online payment is secured by paypal",
       },
     ],
   };

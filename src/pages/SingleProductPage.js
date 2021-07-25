@@ -7,7 +7,7 @@ import { ProductConsumer } from "../context";
 export default function SingleProductPage() {
   return (
     <>
-      <Hero img={singleProductImg} title="single product" />
+      <Hero img={singleProductImg} title="Car description" />
       <ProductConsumer>
         {(value) => {
           const { singleProduct, addToCart, loading } = value;
@@ -33,7 +33,7 @@ export default function SingleProductPage() {
                       price : ${price}
                     </h5>
                     <p className="text-capitalize text-title mt-3">
-                      some info about product:
+                      some info about car:
                     </p>
                     <p>{description}</p>
                     <button
@@ -49,7 +49,7 @@ export default function SingleProductPage() {
                       className="main-link"
                       style={{ margin: "0.75rem" }}
                     >
-                      back to products
+                      back to cars
                     </Link>
                   </div>
                 </div>

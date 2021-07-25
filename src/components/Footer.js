@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="row">
               <div className="col-md-6">
                 <p className="text-capitalize">
-                  copyright &copy; tech store {new Date().getFullYear()} all
+                  copyright &copy; Car Store {new Date().getFullYear()} all
                   rights reserved
                 </p>
               </div>
