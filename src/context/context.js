@@ -278,7 +278,7 @@ class ProductProvider extends Component {
         if (tempSearch === tempTitle) {
           return item;
         }
-        // return 0;
+        return 0;
       });
     }
 
